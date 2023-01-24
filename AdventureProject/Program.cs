@@ -6,6 +6,7 @@ namespace AdventureProject
     {
         private static void Main(string[] args)
         {
+            // declare story strings
             string username;
             string computer;
             string start;
