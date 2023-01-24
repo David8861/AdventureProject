@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AdventureProject
 {
-    class CYOA
+    internal class CYOA
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             string username;
             string computer;
@@ -17,6 +13,7 @@ namespace AdventureProject
             string direction;
             string oldman;
             string gender;
+            string sandquery;
 
             computer = "Drew";
             bestfriend = "Brian";
@@ -48,7 +45,6 @@ namespace AdventureProject
             Console.WriteLine("Doesn't matter much now. My body is cold and my bones ache.");
             Console.WriteLine("Shrubs and flowers surround me. Besides the fauna, nothing lives. Should I head north, east, or west?");
 
-            
             direction = Console.ReadLine();
 
             if (direction == "north")
@@ -73,7 +69,35 @@ namespace AdventureProject
                 return;
             }
             Console.WriteLine(username + " followed " + oldman + " past the forest. Large oak trees were replaced by sand dunes.");
+            Console.WriteLine("Snakes slithered to " + oldman + ".");
+            Console.WriteLine("Some time had passed, and " + username + " " + oldman + " were exhausted.");
+            Console.WriteLine("The pair sat down in the hot sand to rest. However, " + username + " noticed a lizard inching toward them.");
+
+            Console.WriteLine("Should " + username + " and " + oldman + " try to kill it or run? Type 'kill' or 'run'"); 
+            sandquery = Console.ReadLine();
+
+            if (sandquery == "kill")
+            {
+                Console.WriteLine(username + " and " + oldman + " stomped on the lizard once, but it escaped.");
+                Console.WriteLine("Phew that was close, said " + oldman + ". Let's keep going. Hopefully, we'll find something!");
+                Console.WriteLine("The desert ceased. " + username + " noticed a small door directly ahead.");
+                Console.WriteLine("They opened the door, and lived to see another day.");
+                Console.WriteLine("Congratulations, " + username + " and " + oldman + "! You made it to the end!");
+
+                return;
+            }
+            else if (sandquery == "run")
+            {
+                Console.WriteLine("The pair escaped posthaste. The lizard caught up to " + oldman + " and killed him!");
+                Console.WriteLine("Since " + username + " is without a partner, " + gender + " continued through the desert.");
+                Console.WriteLine(username + " found a door at the end of the desert and " + gender + " stepped through it.");
+                Console.WriteLine("Congratulations, " + username + ". You made it to the end!");
+
+                Console.WriteLine("Unfortunately, " + oldman + " isn't here to celebrate with you.");
+
+                return;
 
             }
         }
     }
+}
