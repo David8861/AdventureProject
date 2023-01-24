@@ -16,6 +16,7 @@ namespace AdventureProject
             string gender;
             string sandquery;
 
+            // give story strings name values
             computer = "Drew";
             bestfriend = "Brian";
             oldman = "Antwon";
@@ -37,7 +38,7 @@ namespace AdventureProject
             Console.WriteLine("Let's begin. Type 'yes' to start: ");
 
             start = Console.ReadLine();
-
+            // if start, use paramaters user defined
             if (start == "yes")
             {
                 Console.WriteLine("Last night must've been rough. I can't even remember where I was or who I was with. Could it have been " + bestfriend + "? Ehh...probably not.");
@@ -47,7 +48,7 @@ namespace AdventureProject
             Console.WriteLine("Shrubs and flowers surround me. Besides the fauna, nothing lives. Should I head north, east, or west?");
 
             direction = Console.ReadLine();
-
+            // direction for user 
             if (direction == "north")
             {
                 Console.WriteLine("The trees get taller and the taller the more you proceed. Hidden animals make noises few can tolerate.");
@@ -71,12 +72,12 @@ namespace AdventureProject
             }
             Console.WriteLine(username + " followed " + oldman + " past the forest. Large oak trees were replaced by sand dunes.");
             Console.WriteLine("Snakes slithered to " + oldman + ".");
-            Console.WriteLine("Some time had passed, and " + username + " " + oldman + " were exhausted.");
+            Console.WriteLine("Some time had passed, " + username + " and " + oldman + " were exhausted.");
             Console.WriteLine("The pair sat down in the hot sand to rest. However, " + username + " noticed a lizard inching toward them.");
 
             Console.WriteLine("Should " + username + " and " + oldman + " try to kill it or run? Type 'kill' or 'run'"); 
             sandquery = Console.ReadLine();
-
+            // user decision
             if (sandquery == "kill")
             {
                 Console.WriteLine(username + " and " + oldman + " stomped on the lizard once, but it escaped.");
@@ -95,7 +96,7 @@ namespace AdventureProject
                 Console.WriteLine("Congratulations, " + username + ". You made it to the end!");
 
                 Console.WriteLine("Unfortunately, " + oldman + " isn't here to celebrate with you.");
-
+                // end program
                 return;
 
             }
