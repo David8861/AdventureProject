@@ -7,14 +7,7 @@ namespace AdventureProject
         private static void Main(string[] args)
         {
             // declare story strings
-            string username;
-            string computer;
-            string start;
-            string bestfriend;
-            string direction;
-            string oldman;
-            string gender;
-            string sandquery;
+            string username, computer, start, bestfriend, direction, oldman, gender, sandquery;
 
             // give story strings name values
             computer = "Drew";
@@ -48,7 +41,7 @@ namespace AdventureProject
             Console.WriteLine("Shrubs and flowers surround me. Besides the fauna, nothing lives. Should I head north, east, or west?");
 
             direction = Console.ReadLine();
-            // direction for user 
+            // direction for user
             if (direction == "north")
             {
                 Console.WriteLine("The trees get taller and the taller the more you proceed. Hidden animals make noises few can tolerate.");
@@ -75,7 +68,7 @@ namespace AdventureProject
             Console.WriteLine("Some time had passed, " + username + " and " + oldman + " were exhausted.");
             Console.WriteLine("The pair sat down in the hot sand to rest. However, " + username + " noticed a lizard inching toward them.");
 
-            Console.WriteLine("Should " + username + " and " + oldman + " try to kill it or run? Type 'kill' or 'run'"); 
+            Console.WriteLine("Should " + username + " and " + oldman + " try to kill it or run? Type 'kill' or 'run'");
             sandquery = Console.ReadLine();
             // user decision
             if (sandquery == "kill")
@@ -98,7 +91,6 @@ namespace AdventureProject
                 Console.WriteLine("Unfortunately, " + oldman + " isn't here to celebrate with you.");
                 // end program
                 return;
-
             }
         }
     }
